@@ -1,0 +1,89 @@
+.card {
+    min-width: 100%;
+}
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+    max-height: 400px;
+    min-width: 100%;
+}
+
+.mat-table {
+    overflow: auto;
+    max-height: 400px;
+}
+
+a {
+    cursor: pointer;
+}
+
+.example-full-width {
+    width: 30%;
+}
+
+.mat-input-underline {
+    background-color: #FF0000;
+}
+
+.table-header {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.right {
+    margin-left: 70%;
+}
+
+
+
+mat-sidenav-container,
+mat-sidenav-content,
+mat-sidenav {
+    height: 100%;
+}
+
+mat-sidenav {
+    width: 250px;
+}
+
+.a-nav {
+    text-decoration: none;
+    color: white;
+}
+
+a-nav:hover,
+a-nav:active {
+    color: lightgray;
+}
+
+.navigation-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.icon_custom {
+    display: inline-block;
+    height: 30px;
+    margin: 0 auto;
+    padding-right: 5px;
+    text-align: center;
+    vertical-align: middle;
+    width: 15%;
+}
+
+.label {
+    display: inline-block;
+    line-height: 30px;
+    margin: 0;
+    width: 85%;
+}

@@ -1,0 +1,156 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav role="navigation">
+    <mat-nav-list>
+      <a mat-list-item type="button">
+        <mat-icon class="icon_custom">input</mat-icon>
+        <span class="label">LogOut</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <div fxHide.gt-xs>
+        <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+      <div>
+        <a class="a-nav" routerLink="/">
+          Contacts Book
+        </a>
+      </div>
+      <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
+        <ul fxLayout fxLayoutGap="20px" class="navigation-items">
+          <li>
+            <a>
+              <mat-icon class="icon_custom">input</mat-icon>
+              <span class="label">LogOut</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </mat-toolbar>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<div>
+  <br>
+  <div class="container">
+    <div class="container">
+      <div fxLayout="column" fxLayoutGap="20px" fxLayout.gt-md="row" fxLayoutAlign="space-around center"
+        class="content">
+        <div class="blocks" fxLayoutGap="20px" fxLayout="row">
+          <button button="submit" mat-raised-button color="primary" routerLink="/add">
+            <mat-icon>add</mat-icon> Add Contact
+          </button>
+          <button button="submit" mat-raised-button color="primary">
+            <mat-icon>cloud_upload</mat-icon> Import Contact
+          </button>
+          <button button="submit" mat-raised-button color="primary">
+            <mat-icon>cloud_download</mat-icon> Export Contact
+          </button>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="container">
+      <div fxLayout="row" fxLayoutAlign="center center" class="content">
+        <mat-card class="card">
+
+          <mat-card-title>
+            <div fxLayout="row" fxLayoutGap="20px" fxFlexAlign="center" fxLayoutAlign="space-around center">
+              <div>
+                <h3>Contacts</h3>
+              </div>
+              <div class="right">
+                <mat-form-field>
+                  <mat-label>Filter</mat-label>
+                  <input matInput (keyup)="applyFilter($event)" placeholder="Search columns" #input>
+                </mat-form-field>
+              </div>
+            </div>
+          </mat-card-title>
+          <mat-card-content>
+            <div class="example-container mat-elevation-z8">
+
+              <table mat-table [dataSource]="dataSource" matSort (matSortChange)="announceSortChange($event)"
+                class="mat-elevation-z8">
+
+                <ng-container matColumnDef="birthDate">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by birthDate">
+                    Birth Date
+                  </th>
+                  <td mat-cell *matCellDef="let element"> {{element.birthDate}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="firstName">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by first name">
+                    First Name
+                  </th>
+                  <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="lastName">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by last name">
+                    Last Name
+                  </th>
+                  <td mat-cell *matCellDef="let element"> {{element.lastName}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="email">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by email">
+                    Email
+                  </th>
+                  <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="phoneNumber">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by phone number">
+                    Phone Number
+                  </th>
+                  <td mat-cell *matCellDef="let element"> {{element.phoneNumber}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="address">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by address">
+                    Address
+                  </th>
+                  <td mat-cell *matCellDef="let element"> {{element.address}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="zipCode">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by zip code">
+                    Zip Code
+                  </th>
+                  <td mat-cell *matCellDef="let element"> {{element.zipCode}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="action">
+                  <th mat-header-cell *matHeaderCellDef></th>
+                  <td mat-cell *matCellDef="let element">
+                    <a type="button" (click)="openDeleteConfirmationDialog(element.id)">
+                      <mat-icon>delete</mat-icon>
+                    </a>
+                    <a type="button" [routerLink]="['/edit', element.id]">
+                      <mat-icon>update</mat-icon>
+                    </a>
+                  </td>
+                </ng-container>
+
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              </table>
+              <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons
+                aria-label="Select page of periodic elements">
+              </mat-paginator>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

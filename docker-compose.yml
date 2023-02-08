@@ -1,0 +1,79 @@
+version: '3.8'
+services:
+  db:
+    container_name: pg_container
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: ach
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: contacts
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+  pgadmin:
+    container_name: pgadmin4_container
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: root
+    ports:
+      - "5050:80"
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin
+
+  contacts-elasticsearch:
+    container_name: elasticsearch
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.5.3
+    volumes:
+      - elasticsearch:/usr/share/elasticsearch/data/
+    restart: always
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      - 'xpack.security.enabled=false'
+      - 'discovery.type=single-node'
+      - 'bootstrap.memory_lock=true'
+      - 'ES_JAVA_OPTS=-Xms512m -Xmx512m'
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+      nofile:
+        soft: 65536
+        hard: 65536
+    cap_add:
+      - IPC_LOCK
+
+  backend:
+    container_name: backend
+    build:
+      context: backend
+      dockerfile: ../docker/backend/Dockerfile
+    image: backend:latest
+    environment:
+      - "SPRING_PROFILES_ACTIVE=docker"
+    ports:
+      - "8081:8081"
+    depends_on:
+      - db
+      - contacts-elasticsearch
+  
+  frontend:
+    container_name: frontend
+    build:
+      context: frontend
+      dockerfile: ../docker/frontend/Dockerfile
+    image: frontend:latest
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend  
+
+volumes:
+  pg-data:
+  pgadmin-data:
+  elasticsearch:

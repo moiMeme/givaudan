@@ -1,0 +1,29 @@
+.card {
+    min-width: 100%;
+}
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+    max-height: 500px;
+    min-width: 100%;
+}
+
+.example-container mat-form-field+mat-form-field {
+    margin-left: 8px;
+}
+
+
+.container {
+    padding: 20px;
+}
+
+
+.form-element {
+    padding: 5px 0px 25px 2px;
+    width: 100%;
+}
+
+.button {
+    width: 100%;
+}

@@ -1,0 +1,77 @@
+<div class="container" novalidate>
+  <mat-card class="card">
+    <mat-card-title>
+      <h3>Update new Contact</h3>
+    </mat-card-title>
+    <mat-card-content>
+
+      <div class="container">
+        <form (ngSubmit)="udapte()" layout layout-align="center" layout-padding>
+
+          <mat-form-field class="form-element">
+            <mat-label>Enter the first name</mat-label>
+            <input matInput placeholder="First Name" type="text" required [(ngModel)]="contactForm.firstName"
+              name="firstName">
+            <mat-error *ngIf="addForm.controls.firstName.touched && addForm.controls.firstName.invalid">
+              <span *ngIf="addForm.controls.firstName.errors.required">This field is mandatory.</span>
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="form-element">
+            <mat-label>Enter the last name</mat-label>
+            <input matInput placeholder="Last Name" type="text" required [(ngModel)]="contactForm.lastName"
+              name="lastName">
+            <mat-error *ngIf="addForm.controls.lastName.touched && addForm.controls.lastName.invalid">
+              <span *ngIf="addForm.controls.lastName.errors.required">This field is mandatory.</span>
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="form-element">
+            <mat-label>Enter the email</mat-label>
+            <input matInput placeholder="Email" type="text" required [(ngModel)]="contactForm.email" name="email">
+            <mat-error *ngIf="addForm.controls.email.touched && addForm.controls.email.invalid">
+              <span *ngIf="addForm.controls.email.errors.required">This field is mandatory.</span>
+              <span *ngIf="addForm.controls.email.errors.email">Email not valid.</span>
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="form-element">
+            <mat-label>Enter the phone number</mat-label>
+            <input matInput placeholder="Phone Number" type="text" required [(ngModel)]="contactForm.phoneNumber"
+              name="phoneNumber">
+            <mat-error *ngIf="addForm.controls.phoneNumber.touched && addForm.controls.phoneNumber.invalid">
+              <span *ngIf="addForm.controls.phoneNumber.errors.required">This field is mandatory.</span>
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="form-element">
+            <mat-label>Enter the address</mat-label>
+            <textarea matInput placeholder="Address" required [(ngModel)]="contactForm.address"
+              name="address"></textarea>
+            <mat-error *ngIf="addForm.controls.address.touched && addForm.controls.address.invalid">
+              <span *ngIf="addForm.controls.address.errors.required">This field is mandatory.</span>
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="form-element">
+            <mat-label>Enter the zip code</mat-label>
+            <input matInput placeholder="Zip Code" type="text" required [(ngModel)]="contactForm.zipCode"
+              name="zipCode">
+            <mat-error *ngIf="addForm.controls.zipCode.touched && addForm.controls.zipCode.invalid">
+              <span *ngIf="addForm.controls.zipCode.errors.required">This field is mandatory.</span>
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="form-element">
+            <mat-label>Birth Date</mat-label>
+            <input matInput [matDatepicker]="picker" placeholder="Birth Date" equired
+              [(ngModel)]="contactForm.birthDate" name="birthDate">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+
+          <div class="button">
+            <button mat-raised-button type="submit" color="primary" class="button">Save</button>
+          </div>
+        </form>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

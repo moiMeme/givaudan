@@ -1,0 +1,194 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "json-server",
+      "lastName": "typicode",
+      "email": "a@b.c",
+      "login": "admin",
+      "role": "ADMIN_ROLE"
+    }
+  ],
+  "contacts": [
+    {
+      "id": 1,
+      "firstName": "ahmed",
+      "lastName": "chabrak",
+      "email": "a@n.c",
+      "phoneNumber": "0102030405",
+      "address": "13 rue bla bla",
+      "zipCode": "92130",
+      "birthDate": "01/01/1987"
+    },
+    {
+      "id": 3,
+      "firstName": "ahmed",
+      "lastName": "chabrak",
+      "email": "a@n.c",
+      "phoneNumber": "0102030405",
+      "address": "13 rue bla bla",
+      "zipCode": "92130",
+      "birthDate": "01/01/1987"
+    },
+    {
+      "id": 4,
+      "firstName": "ahmed",
+      "lastName": "chabrak",
+      "email": "a@n.c",
+      "phoneNumber": "0102030405",
+      "address": "13 rue bla bla",
+      "zipCode": "92130",
+      "birthDate": "01/01/1987"
+    },
+    {
+      "id": 5,
+      "firstName": "ahmed",
+      "lastName": "chabrak",
+      "email": "a@n.c",
+      "phoneNumber": "0102030405",
+      "address": "13 rue bla bla",
+      "zipCode": "92130",
+      "birthDate": "01/01/1987"
+    },
+    {
+      "id": 6,
+      "firstName": "ahmed",
+      "lastName": "chabrak",
+      "email": "a@n.c",
+      "phoneNumber": "0102030405",
+      "address": "13 rue bla bla",
+      "zipCode": "92130",
+      "birthDate": "01/01/1987"
+    },
+    {
+      "id": 7,
+      "firstName": "ahmed",
+      "lastName": "chabrak",
+      "email": "a@n.c",
+      "phoneNumber": "0102030405",
+      "address": "13 rue bla bla",
+      "zipCode": "92130",
+      "birthDate": "01/01/1987"
+    },
+    {
+      "id": 8,
+      "firstName": "ahmed",
+      "lastName": "chabrak",
+      "email": "a@n.c",
+      "phoneNumber": "0102030405",
+      "address": "13 rue bla bla",
+      "zipCode": "92130",
+      "birthDate": "01/01/1987"
+    },
+    {
+      "id": 9,
+      "firstName": "ahmed",
+      "lastName": "chabrak",
+      "email": "a@n.c",
+      "phoneNumber": "0102030405",
+      "address": "13 rue bla bla",
+      "zipCode": "92130",
+      "birthDate": "01/01/1987"
+    },
+    {
+      "id": 10,
+      "firstName": "ahmed",
+      "lastName": "chabrak",
+      "email": "a@n.c",
+      "phoneNumber": "0102030405",
+      "address": "13 rue bla bla",
+      "zipCode": "92130",
+      "birthDate": "01/01/1987"
+    },
+    {
+      "id": 11,
+      "firstName": "ahmed",
+      "lastName": "chabrak",
+      "email": "a@n.c",
+      "phoneNumber": "0102030405",
+      "address": "13 rue bla bla",
+      "zipCode": "92130",
+      "birthDate": "01/01/1987"
+    },
+    {
+      "id": 12,
+      "firstName": "ahmed",
+      "lastName": "chabrak",
+      "email": "a@n.c",
+      "phoneNumber": "0102030405",
+      "address": "13 rue bla bla",
+      "zipCode": "92130",
+      "birthDate": "01/01/1987"
+    },
+    {
+      "id": 13,
+      "firstName": "ahmed",
+      "lastName": "chabrak",
+      "email": "a@n.c",
+      "phoneNumber": "0102030405",
+      "address": "13 rue bla bla",
+      "zipCode": "92130",
+      "birthDate": "01/01/1987"
+    },
+    {
+      "id": 14,
+      "firstName": "ahmed",
+      "lastName": "chabrak",
+      "email": "a@n.c",
+      "phoneNumber": "0102030405",
+      "address": "13 rue bla bla",
+      "zipCode": "92130",
+      "birthDate": "01/01/1987"
+    },
+    {
+      "id": 15,
+      "firstName": "ahmed",
+      "lastName": "chabrak",
+      "email": "a@n.c",
+      "phoneNumber": "0102030405",
+      "address": "13 rue bla bla",
+      "zipCode": "92130",
+      "birthDate": "01/01/1987"
+    },
+    {
+      "id": 16,
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "phoneNumber": "",
+      "address": "",
+      "zipCode": "",
+      "birthDate": "2023-02-06T22:36:32.670Z"
+    },
+    {
+      "id": 17,
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "phoneNumber": "",
+      "address": "",
+      "zipCode": "",
+      "birthDate": "2023-02-06T22:48:44.632Z"
+    },
+    {
+      "id": 18,
+      "firstName": "jj",
+      "lastName": "jj",
+      "email": "ahmed.chebrak@gmail.com",
+      "phoneNumber": "lkklk",
+      "address": "kjkjkljlk",
+      "zipCode": "kkllk",
+      "birthDate": "2023-02-09T23:00:00.000Z"
+    },
+    {
+      "id": 19,
+      "firstName": "xyz",
+      "lastName": "fff",
+      "email": "ach@gmail.com",
+      "phoneNumber": "01020405",
+      "address": "13 Rue jules",
+      "zipCode": "97142",
+      "birthDate": "2023-02-07T01:49:37.731Z"
+    }
+  ]
+}

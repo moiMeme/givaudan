@@ -1,0 +1,17 @@
+contacts.properties-encryptor.algorithm=PBEWithMD5AndTripleDES
+contacts.properties-encryptor.iv-generator-classname=org.jasypt.iv.NoIvGenerator
+
+contacts.security.jwt.secret=DEC(aI7cX5lWn0zweOb84ydilAlK3pMJB7Br8Beb65T9XqzBa1LcMDmqxdM/6kmFRH1ivtKuu+oUQRIqQFLqXAu4NXrFCkgzmoGflqji9r2+2kN2jRrDTmTgpkHgcjc9anRunOp0RP+fslbRmDZu+hJkQV07t9IRVS/8VvrYao3pEGp8DOhUXPeiOuCTHGn2+5aDH+oElYnWV6183aG/OSzvziCl0mqKiU698Of4VfFTGlMcUC02sljdgfEOFMOFHB0jVNlCLOqXGcGjhNeYeijHqaQ1QkCEdw81nVE1Gf1BtUy68rhcXoErdzlrxJU3+k7TqBmEv8ur/xaDGPo8aX+yAQ==)
+contacts.security.jwt.token-validity-in-seconds=86400
+contacts.security.jwt.token-validity-in-seconds-for-remember-me=2592000
+
+contacts.cache.time-to-live-seconds=3600
+contacts.cache.max-entries=100
+
+contacts.elasticsearch.host-and-port=localhost:9200
+contacts.elasticsearch.connect-timeout=5
+contacts.elasticsearch.socket-timeout=3
+
+spring.application.name=contacts
+
+
